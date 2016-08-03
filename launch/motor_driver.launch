@@ -1,5 +1,5 @@
 <launch>
 
-<node pkg="rover" type="serial_driver.py" name="serial_driver" launch-prefix="sudo" />
+<node pkg="rover" type="serial_driver.py" name="serial_driver" />
 
 </launch>
