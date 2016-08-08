@@ -1,0 +1,111 @@
+<robot name="rover5">
+ 	<link name="base_link" >
+	 	<visual>
+ 			<geometry>
+ 				<box size="0.09 0.17 0.05"/>
+			</geometry>
+ 		</visual>
+	</link>
+	<!-- See labels on physical robot for wheel numbers -->
+ 	<link name="leg1">
+		<visual>
+ 			<geometry>
+ 				<box size="0.0335 0.085 0.035"/>
+			</geometry>
+ 		</visual>
+		<origin xyx="0.069 0 0" />
+	</link>
+ 	<link name="leg2" />
+ 	<link name="leg3" />
+ 	<link name="leg4" />
+ 	<link name="wheel1">
+	 	<visual>
+	 		<geometry>
+	 			<cylinder length="0.03" radius="0.03" />
+	 		</geometry>
+			<material name="white">
+				<color rgba="1 1 1 1"/>
+			</material>
+		</visual>
+	</link>
+ 	<link name="wheel2">
+	 	<visual>
+	 		<geometry>
+	 			<cylinder length="0.03" radius="0.03" />
+	 		</geometry>
+			<material name="white"/>
+		</visual>
+	</link>
+	<link name="wheel3">
+	 	<visual>
+	 		<geometry>
+	 			<cylinder length="0.03" radius="0.03" />
+	 		</geometry>
+			<material name="white"/>
+		</visual>
+	</link>
+ 	<link name="wheel4">
+	 	<visual>
+	 		<geometry>
+	 			<cylinder length="0.03" radius="0.03" />
+	 		</geometry>
+			<material name="white"/>
+		</visual>
+	</link>
+
+ 	<joint name="leg1_joint" type="fixed">
+ 		<parent link="base_link" />
+ 		<child link="leg1" />
+ 		<origin xyz="-0.045 -0.045 -0.035"  />
+ 	</joint>
+ 	
+ 	<joint name="leg2_joint" type="fixed">
+ 		<parent link="base_link" />
+ 		<child link="leg2" />
+ 		<origin xyz="-0.0445 -0.0445 0" rpy="0 1.74533 0" />
+ 	</joint>
+ 	
+ 	<joint name="leg3_joint" type="fixed">
+ 		<parent link="base_link" />
+ 		<child link="leg3" />
+ 		<origin xyz="0.0445 0.0445 0" rpy=" 0 1.39626 0" />
+ 	</joint>
+ 	5
+ 	<joint name="leg4_joint" type="fixed">
+ 		<parent link="base_link" />
+ 		<child link="leg4" />
+ 		<origin xyz="0.0445 -0.0445 0" rpy=" 0 1.39626 0" />
+ 	</joint>
+ 	
+ 	<joint name="wheel1_motor" type="continuous">
+ 		<parent link="leg1" />
+ 		<child link="wheel1" />
+ 		<origin  xyz="0 0.065 -0.045" />
+ 		<axis xyz="0 1 0" />
+	</joint>]
+	
+	<joint name="wheel2_motor" type="continuous">
+ 		<parent link="leg2" />
+ 		<child link="wheel2" />
+ 		<origin xyx="0 -0.065 -0.045" />
+ 		<axis xyz="0 1 0" />
+	</joint>
+	
+	<joint name="wheel3_motor" type="continuous">
+ 		<parent link="leg3" />
+ 		<child link="wheel3" />
+ 		<origin xyz="0 0.065 -0.045" />
+ 		<axis xyz="0 1 0" />
+	</joint>
+	
+	<joint name="wheel4_motor" type="continuous">
+ 		<parent link="leg4" />
+ 		<child link="wheel4" />
+ 		<origin xyz="0 -0.065 -0.045" />
+ 		<axis xyz="0 1 0" />
+	</joint>
+	
+ 		
+</robot>
+
+ 		
