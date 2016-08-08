@@ -1,5 +1,6 @@
 <launch>
 
 <node pkg="rover" type="serial_driver.py" name="serial_driver" />
+<node pkg="rover" respawn="true" type="encoder_driver.py" name="encoder_driver" />
 
 </launch>
