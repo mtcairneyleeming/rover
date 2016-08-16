@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<robot name="base" xmlns:xacro="http://ros.org/wiki/xacro">
+
+<!-- Define a number of dimensions using properties -->
+
+<property name="base_size_x" value="0.09" />
+
+<property name="base_size_y" value="0.17" />
+<property name="base_size_z" value="0.05" />
+
+<property name="wheel_length" value="0.03" />
+<property name="wheel_radius" value="0.03" />
+<property name="wheel_offset_x" value="0.082" />
+<property name="wheel_offset_y" value="0.0945" />
+<property name="wheel_offset_z" value="-0.06" />
+<property name="PI" value="3.1415" />
+
+

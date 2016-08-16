@@ -13,7 +13,8 @@
  				<box size="0.0335 0.085 0.035"/>
 			</geometry>
  		</visual>
-		<origin xyx="0.069 0 0" />
+		<!-- roughly 45 degrees off flat for idealised linkage that is a line from the wheel axle  - 10 deg per notch, and 15 deg for the  -->
+		<origin xyx="0.069 0 0" rpy="" />
 	</link>
  	<link name="leg2" />
  	<link name="leg3" />

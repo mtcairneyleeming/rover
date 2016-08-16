@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<robot name="arm" xmlns:xacro="http://ros.org/wiki/xacro">
+<property name="">
+<link name="base">
+<visual>
+<geometry>
+<box size >
+
