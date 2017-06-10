@@ -1,0 +1,8 @@
+<launch>
+  <!-- include motor drivers -->
+  <include file="$(find rover)/launch/motor_driver.launch" />
+  <!-- include encoder readers -->
+  <include file="$(find rover)/launch/encoder_driver.launch" />
+  <!-- include ar_tracking -->
+  <include file="$(find rover)/launch/ar_tracking.launch" />
+</launch>

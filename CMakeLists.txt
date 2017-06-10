@@ -164,7 +164,10 @@ install(PROGRAMS
 ## Mark other files for installation (e.g. launch and bag files, etc.)
 install(FILES
   launch/motor_driver.launch
-  launch/rover_drive.launch
+  launch/encoder_driver.launch
+  launch/camera.launch
+  launch/ar_tracking.launch
+  launch/rover.launch
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/launch
 )
 

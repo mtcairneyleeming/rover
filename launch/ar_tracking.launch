@@ -1,0 +1,13 @@
+<launch>
+    <!--TODO: measure actual printed tags-->
+    <arg name="marker_size" default="9" />
+    <arg name="max_new_marker_error" default="0.08" />
+    <arg name="max_track_error" default="0.05" />
+    <arg name="cam_image_topic" default="/camera/image" />
+    <arg name="cam_info_topic" default="/camera/rgb/camera_info" />
+    <arg name="output_frame" default="/camera_link" />
+    <!-- call camera launch file, to start the camera-->
+    <include file="$(find rover)/launch/camera.launch" />
+    <!-- start tracking node-->
+    <node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkers"respawn="false" output="screen" args="$(arg marker_size) $(argmax_new_marker_error) $(arg max_track_error) $(arg cam_image_topic) $(argcam_info_topic) $(arg output_frame)" />
+</launch>
